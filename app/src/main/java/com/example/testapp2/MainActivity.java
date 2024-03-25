@@ -2,7 +2,6 @@ package com.example.testapp2;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentContainerView;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
@@ -11,18 +10,18 @@ import android.view.View;
 import com.example.testapp2.databinding.ActivityMainBinding;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements InnerInterface.Interface
+{
 
-    private ActivityMainBinding binding;
+    public ActivityMainBinding binding;
     Fragment fragment_blank = new BlankFragment();
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
-        setContainerView(fragment_blank);
     }
 
     public void setContainerView(Fragment fragment) {
@@ -31,5 +30,25 @@ public class MainActivity extends AppCompatActivity {
         transaction.replace(binding.fragmentContainerView.getId(), fragment);
         transaction.addToBackStack(null);
         transaction.commit();
+    }
+    @Override
+    public void ButtonClick1(View v)
+    {
+        setContainerView(fragment_blank);
+    }
+    @Override
+    public void ButtonClick2(View v)
+    {
+
+    }
+    @Override
+    public void ButtonClick3(View v)
+    {
+
+    }
+    @Override
+    public void ButtonClick4(View v)
+    {
+
     }
 }
