@@ -26,10 +26,10 @@ public class InnerInterface extends Fragment {
     }
 
     @Override
-    public void onAttach(@NonNull Context activityContext) {
-        super.onAttach(activityContext);
+    public void onAttach(@NonNull Context Context) {
+        super.onAttach(Context);
         try {
-            callback = (Interface) activityContext;
+            callback = (Interface) Context;
         } catch (ClassCastException e) {
             throw new ClassCastException("err");
         }

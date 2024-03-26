@@ -2,15 +2,17 @@ package com.example.testapp2;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.testapp2.databinding.ActivityBusBinding;
 
-public class BusActivity extends AppCompatActivity {
+public class BusActivity extends AppCompatActivity implements InputFragment2.onSomeEventListener{
 
     public ActivityBusBinding binding;
 
@@ -34,5 +36,10 @@ public class BusActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    public void someEvent(String txt) {
+        TextView textView = fragment_text2.getView().findViewById(R.id.textView3);
+        textView.setText(txt);
     }
 }
