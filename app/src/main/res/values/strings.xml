@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">testapp2</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title">Title</string>
-    <string name="button_main_1">b1</string>
-    <string name="button_main_2">b2</string>
-    <string name="button_main_3">b3</string>
-    <string name="button_main_4">b4</string>
+    <string name="title">Interconnection of fragments</string>
+    <string name="button_main_1">Callback</string>
+    <string name="button_main_2">Event bus</string>
+    <string name="text_result">Result</string>
+    <string name="button_input">Commit changes</string>
+    <string name="text_edit">Input here</string>
+    <string name="button_return">Back</string>
 </resources>

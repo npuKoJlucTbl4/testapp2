@@ -19,8 +19,6 @@ public class InnerInterface extends Fragment {
     {
         void ButtonClick1(View view);
         void ButtonClick2(View view);
-        void ButtonClick3(View view);
-        void ButtonClick4(View view);
     }
 
     public InnerInterface() {
@@ -44,8 +42,6 @@ public class InnerInterface extends Fragment {
 
         Button button1 = binding.button1;
         Button button2 = binding.button2;
-        Button button3 = binding.button3;
-        Button button4 = binding.button4;
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 callback.ButtonClick1(v);
@@ -56,16 +52,7 @@ public class InnerInterface extends Fragment {
                 callback.ButtonClick2(v);
             }
         });
-        button3.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                callback.ButtonClick3(v);
-            }
-        });
-        button4.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                callback.ButtonClick4(v);
-            }
-        });
+
 
         return v;
     }
