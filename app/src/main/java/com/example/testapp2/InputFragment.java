@@ -20,11 +20,6 @@ public class InputFragment extends Fragment {
         super(R.layout.fragment_input);
     }
 
-    public String getText() {
-        String txt;
-        txt = binding.editText.getText().toString();
-        return txt;
-    }
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentInputBinding.inflate(getLayoutInflater());
